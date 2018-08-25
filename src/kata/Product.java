@@ -3,7 +3,7 @@ package kata;
 public class Product {
 
 	private ProductType type;
-	private String title;
+	private String title = "";
 
 	public Product(ProductType type) {
 		this.type = type;

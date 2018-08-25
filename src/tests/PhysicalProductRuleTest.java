@@ -4,9 +4,9 @@ import org.junit.Assert;
 import org.junit.jupiter.api.Test;
 
 import kata.OrderProcessingService;
-import kata.PhysicalProductRule;
 import kata.Product;
 import kata.ProductType;
+import kata.rules.PhysicalProductRule;
 
 class PhysicalProductRuleTest {
 

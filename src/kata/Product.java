@@ -2,17 +2,17 @@ package kata;
 
 public class Product {
 	
-	private String type;
+	private ProductType type;
 
-	public Product(String type) {
+	public Product(ProductType type) {
 		this.type = type;
 	}
 
-	public void setType(String type) {
+	public void setType(ProductType type) {
 		this.type = type;
 	}
 
-	public String getType() {
+	public ProductType getType() {
 		return this.type;
 	}
 

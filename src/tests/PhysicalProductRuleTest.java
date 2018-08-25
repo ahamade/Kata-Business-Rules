@@ -1,14 +1,21 @@
 package tests;
 
-import static org.junit.jupiter.api.Assertions.*;
-
+import org.junit.Assert;
 import org.junit.jupiter.api.Test;
+
+import kata.OrderProcessingService;
+import kata.PhysicalProductRule;
+import kata.Product;
+import kata.ProductType;
 
 class PhysicalProductRuleTest {
 
 	@Test
-	void testProcessPayment() {
-		fail("Not yet implemented");
+	void testPhysicalProductProcessing() {
+		PhysicalProductRule physicalProductRule = new PhysicalProductRule();
+		Product product = new Product(ProductType.PhysicalProduct);
+		String instuction = physicalProductRule.processPayment(product, new OrderProcessingService());
+		Assert.assertEquals("No Packaging slip. ", "Generate a packing slip for shipping", instuction);
 	}
 
 }

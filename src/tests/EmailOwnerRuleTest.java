@@ -1,14 +1,29 @@
 package tests;
 
-import static org.junit.jupiter.api.Assertions.*;
-
+import org.junit.Assert;
 import org.junit.jupiter.api.Test;
+
+import kata.OrderProcessingService;
+import kata.Product;
+import kata.ProductType;
+import kata.rules.EmailOwnerRule;
 
 class EmailOwnerRuleTest {
 
 	@Test
-	void testProcessPayment() {
-		fail("Not yet implemented");
+	void testEmailOwerOnNewMembership() {
+		EmailOwnerRule rule = new EmailOwnerRule();
+		Product product = new Product(ProductType.NewMembership);
+		String instuction = rule.processPayment(product, new OrderProcessingService());
+		Assert.assertEquals("Could not email owner. ", "email owner", instuction);
+	}
+	
+	@Test
+	void testEmailOwerOnUpdatedMembership() {
+		EmailOwnerRule rule = new EmailOwnerRule();
+		Product product = new Product(ProductType.UpdateMembership);
+		String instuction = rule.processPayment(product, new OrderProcessingService());
+		Assert.assertEquals("Could not email owner. ", "email owner", instuction);
 	}
 
 }

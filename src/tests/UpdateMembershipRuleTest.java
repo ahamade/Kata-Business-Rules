@@ -15,7 +15,7 @@ class UpdateMembershipRuleTest {
 		UpdateMembershipRule rule = new UpdateMembershipRule();
 		Product product = new Product(ProductType.UpdateMembership);
 		String instuction = rule.processPayment(product, new OrderProcessingService());
-		Assert.assertEquals("Could not update membership. ", "update membership", instuction);
+		Assert.assertEquals("Could not update membership. ", "Update membership", instuction);
 	}
 
 }

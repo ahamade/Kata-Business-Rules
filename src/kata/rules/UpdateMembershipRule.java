@@ -12,7 +12,7 @@ public class UpdateMembershipRule implements IPaymentRule {
 	public String processPayment(Product product, IOrderProcessingService service) {
 		service = new OrderProcessingService();
 		if (product.getType() == ProductType.UpdateMembership) {
-			return service.ProcessOrder("update membership");
+			return service.updateMembership();
 		}
 		return "";
 	}

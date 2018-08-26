@@ -15,7 +15,7 @@ class NewMembershipRuleTest {
 		NewMembershipRule rule = new NewMembershipRule();
 		Product product = new Product(ProductType.NewMembership);
 		String instuction = rule.processPayment(product, new OrderProcessingService());
-		Assert.assertEquals("Could not activate membership. ", "activate membership", instuction);
+		Assert.assertEquals("Could not activate membership. ", "Activate membership", instuction);
 	}
 
 }

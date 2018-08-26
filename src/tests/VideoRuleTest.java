@@ -16,7 +16,7 @@ class VideoRuleTest {
 		Product product = new Product(ProductType.Video);
 		product.setTitle("Learning to Ski");
 		String instuction = rule.processPayment(product, new OrderProcessingService());
-		Assert.assertEquals("Could not add free video. ", "add a free First Aid video", instuction);
+		Assert.assertEquals("Could not add free video. ", "Add a free First Aid video", instuction);
 	}
 
 }

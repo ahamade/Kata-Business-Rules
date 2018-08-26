@@ -12,7 +12,7 @@ public class EmailOwnerRule implements IPaymentRule {
 	public String processPayment(Product product, IOrderProcessingService service) {
 		service = new OrderProcessingService();
 		if (product.getType() == ProductType.NewMembership || product.getType() == ProductType.UpdateMembership) {
-			return service.ProcessOrder("email owner");
+			return service.emailOwner();
 		}
 		return "";
 	}

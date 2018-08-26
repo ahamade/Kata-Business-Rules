@@ -12,7 +12,7 @@ public class CommissionPaymentRule implements IPaymentRule {
 	public String processPayment(Product product, IOrderProcessingService service) {
 		service = new OrderProcessingService();
 		if (product.getType() == ProductType.PhysicalProduct || product.getType() == ProductType.Book) {
-			return service.ProcessOrder("generate a commission payment");
+			return service.generateCommissionPayment();
 		}
 		return "";
 	}

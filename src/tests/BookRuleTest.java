@@ -15,7 +15,7 @@ class BookRuleTest {
 		BookRule bookRule = new BookRule();
 		Product product = new Product(ProductType.Book);
 		String instuction = bookRule.processPayment(product, new OrderProcessingService());
-		Assert.assertEquals("No duplicate packing slip. ", "create a duplicate packing slip for the royalty department", instuction);
+		Assert.assertEquals("No duplicate packing slip. ", "Create a duplicate packing slip for the royalty department", instuction);
 	}
 
 }

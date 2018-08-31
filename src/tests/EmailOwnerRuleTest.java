@@ -15,7 +15,7 @@ class EmailOwnerRuleTest {
 		EmailOwnerRule rule = new EmailOwnerRule();
 		Product product = new Product(ProductType.NewMembership);
 		String instuction = rule.processPayment(product, new OrderProcessingService());
-		Assert.assertEquals("Could not email owner. ", "email owner", instuction);
+		Assert.assertEquals("Could not email owner. ", "Email owner", instuction);
 	}
 	
 	@Test
@@ -23,7 +23,7 @@ class EmailOwnerRuleTest {
 		EmailOwnerRule rule = new EmailOwnerRule();
 		Product product = new Product(ProductType.UpdateMembership);
 		String instuction = rule.processPayment(product, new OrderProcessingService());
-		Assert.assertEquals("Could not email owner. ", "email owner", instuction);
+		Assert.assertEquals("Could not email owner. ", "Email owner", instuction);
 	}
 
 }

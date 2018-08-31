@@ -12,7 +12,7 @@ public class VideoRule implements IPaymentRule {
 	public String processPayment(Product product, IOrderProcessingService service) {
 		service = new OrderProcessingService();
 		if (product.getType() == ProductType.Video && product.getTitle().equalsIgnoreCase("Learning to Ski")) {
-			return service.ProcessOrder("add a free First Aid video");
+			return service.addFreeVideo();
 		}
 		return "";
 	}

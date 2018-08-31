@@ -15,7 +15,7 @@ class CommissionPaymentRuleTest {
 		CommissionPaymentRule rule = new CommissionPaymentRule();
 		Product product = new Product(ProductType.PhysicalProduct);
 		String instuction = rule.processPayment(product, new OrderProcessingService());
-		Assert.assertEquals("Could not generate a commission. ", "generate a commission payment", instuction);
+		Assert.assertEquals("Could not generate a commission. ", "Generate a commission payment", instuction);
 	}
 	
 	@Test
@@ -23,7 +23,7 @@ class CommissionPaymentRuleTest {
 		CommissionPaymentRule rule = new CommissionPaymentRule();
 		Product product = new Product(ProductType.Book);
 		String instuction = rule.processPayment(product, new OrderProcessingService());
-		Assert.assertEquals("Could not generate a commission. ", "generate a commission payment", instuction);
+		Assert.assertEquals("Could not generate a commission. ", "Generate a commission payment", instuction);
 	}
 
 }

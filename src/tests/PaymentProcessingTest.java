@@ -56,7 +56,7 @@ class PaymentProcessingTest {
 		PaymentProcessing paymentProcessing = new PaymentProcessing(service);
 		ArrayList<String> results = paymentProcessing.processPayment(product);
 		Assert.assertEquals("Should upadte membership.", 2, results.size());
-		Assert.assertEquals("Email owner rule should be the 2nd.", "email owner", results.get(1));
+		Assert.assertEquals("Email owner rule should be the 2nd.", "Email owner", results.get(1));
 	}
 	
 	@Test
@@ -76,7 +76,7 @@ class PaymentProcessingTest {
 		PaymentProcessing paymentProcessing = new PaymentProcessing(service);
 		ArrayList<String> results = paymentProcessing.processPayment(product);
 		Assert.assertEquals("Should generate a packing slip.", 2, results.size());
-		Assert.assertEquals("Commission rule should be the 2nd. ", "generate a commission payment", results.get(1));
+		Assert.assertEquals("Commission rule should be the 2nd. ", "Generate a commission payment", results.get(1));
 	}
 
 }

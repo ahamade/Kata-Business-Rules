@@ -12,7 +12,7 @@ public class BookRule implements IPaymentRule {
 	public String processPayment(Product product, IOrderProcessingService service) {
 		service = new OrderProcessingService();
 		if (product.getType() == ProductType.Book) {
-			return service.ProcessOrder("create a duplicate packing slip for the royalty department");
+			return service.duplicatePackingSlip();
 		}
 		return "";
 	}
